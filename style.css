@@ -30,6 +30,7 @@ header .profile-pic {
     border: 5px solid #fff;
     margin-bottom: 20px;
     background-image: url('https://envs.sh/nUT.png');
+      filter: drop-shadow(0 0 10px #fbc3c3);
     background-size: cover;
     background-position: center;
     display: inline-block;
@@ -43,6 +44,10 @@ header h1 {
 header p {
     font-size: 1.3rem;
     opacity: 0.9;
+}
+header h1:hover, header p:hover{
+    filter: drop-shadow(0 0 10px #fbc3c3);
+
 }
 
 nav {
