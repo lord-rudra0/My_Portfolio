@@ -30,12 +30,14 @@ header .profile-pic {
     border: 5px solid #fff;
     margin-bottom: 20px;
     background-image: url('https://envs.sh/nUT.png');
-      filter: drop-shadow(0 0 10px #fbc3c3);
     background-size: cover;
     background-position: center;
     display: inline-block;
 }
-
+header .profile-pic:hover {
+    transform: scale(1.1);
+    filter:drop-shadow(0 0 10px #fff); ;
+}
 header h1 {
     font-size: 3rem;
     margin-bottom: 15px;
