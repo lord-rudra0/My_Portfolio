@@ -128,36 +128,41 @@
         const projectsSection = document.getElementById('projects');
         const aboutSection = document.getElementById('about');
 
+        // Initially hide the contact section
+        contactSection.style.display = 'none';
+
+        // Toggle contact section visibility on click
         contactToggle.addEventListener('click', (e) => {
             e.preventDefault();
 
-
+            // Toggle contact section visibility
             if (contactSection.style.display === 'none' || contactSection.style.display === '') {
                 contactSection.style.display = 'block';
+                // Hide other sections when contact is shown
                 skillsSection.style.display = 'none';
                 projectsSection.style.display = 'none';
                 aboutSection.style.display = 'none';
             } else {
                 contactSection.style.display = 'none';
+                // Show all other sections when contact is hidden
                 skillsSection.style.display = 'block';
                 projectsSection.style.display = 'block';
                 aboutSection.style.display = 'block';
             }
         });
 
-
-        contactSection.style.display = 'none';
-
-        //if i touch any button contact should be hide
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                contactSection.style.display = 'none';
-                skillsSection.style.display = 'block';
-                projectsSection.style.display = 'block';
-                aboutSection.style.display = 'block';
+        // Hide the contact section when any button is clicked, except the contact button
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', () => {
+                if (contactSection.style.display === 'block') {
+                    contactSection.style.display = 'none';
+                    skillsSection.style.display = 'block';
+                    projectsSection.style.display = 'block';
+                    aboutSection.style.display = 'block';
+                }
             });
         });
+
 
 
 
