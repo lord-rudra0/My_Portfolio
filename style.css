@@ -1,0 +1,610 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #007acc, #003f73);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+header .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-bottom: 20px;
+    background-image: url('https://envs.sh/nUT.png');
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+
+header .profile-pic:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #fff);
+    ;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+header h1:hover,
+header p:hover {
+    filter: drop-shadow(0 0 10px #fbc3c3);
+
+}
+
+nav {
+    background-color: #1b1b1b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007acc;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#about {
+    background-color: #121212;
+    padding: 60px 20px;
+}
+
+#about h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#about h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #007acc;
+    display: block;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #ccc;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+#skills {
+    background: linear-gradient(135deg, #1b1b1b, #2a2a2a);
+    color: #fff;
+}
+
+#skills h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: #007acc;
+    color: #fff;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: transform 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+#projects {
+    background-color: #121212;
+    padding-bottom: 80px;
+}
+
+#projects h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.project h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #007acc;
+}
+
+.project p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.project a {
+    text-decoration: none;
+    color: #007acc;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project a:hover {
+    color: #005999;
+}
+
+.more-projects {
+
+    font-size: 1.2rem;
+}
+
+.more-projects p {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.more-projects a {
+    color: #007acc;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.more-projects a:hover {
+    color: #005999;
+}
+
+
+#contact {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact h2 {
+    color: #005999;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    color: #333;
+
+}
+
+#contact input,
+#contact textarea {
+    padding: 12px;
+    border: 1px solid #f76262;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#contact button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #1b1b1b;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #007acc;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #005999;
+}
+
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        padding-bottom: 20px;
+        font-size: 1rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    #skills h2 {
+        font-size: 2rem;
+    }
+
+    .skill {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+
+    #projects h2 {
+        font-size: 2rem;
+    }
+
+    .project h3 {
+        font-size: 1.3rem;
+    }
+
+    .project p {
+        font-size: 0.8rem;
+    }
+
+    .more-projects {
+        font-size: 1rem;
+    }
+
+    .more-projects p {
+        font-size: 0.9rem;
+    }
+
+    .more-projects a {
+        font-size: 1rem;
+    }
+
+    #contact h2 {
+        font-size: 1.8rem;
+    }
+
+    #contact input,
+    #contact textarea {
+        font-size: 14px;
+    }
+
+    #contact button {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+        padding-bottom: 20px;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    #about h2 {
+        font-size: 1.8rem;
+    }
+
+    #about p {
+        font-size: 0.9rem;
+    }
+
+    #skills h2 {
+        font-size: 1.8rem;
+    }
+
+    .skill {
+        padding: 8px 15px;
+        font-size: 0.7rem;
+    }
+
+    #projects h2 {
+        font-size: 1.8rem;
+    }
+
+    .project h3 {
+        font-size: 1.2rem;
+    }
+
+    .project p {
+        font-size: 0.7rem;
+    }
+
+    .more-projects {
+        font-size: 0.9rem;
+    }
+
+    .more-projects p {
+        font-size: 0.8rem;
+    }
+
+    .more-projects a {
+        font-size: 0.9rem;
+    }
+
+    #contact h2 {
+        font-size: 1.6rem;
+    }
+
+    #contact input,
+    #contact textarea {
+        font-size: 12px;
+    }
+
+    #contact button {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 420px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.8rem;
+        padding-bottom: 20px;
+    }
+
+    nav ul li a {
+        font-size: 0.7rem;
+    }
+
+    #about h2 {
+        font-size: 1.6rem;
+    }
+
+    #about p {
+        font-size: 0.8rem;
+    }
+
+    #skills h2 {
+        font-size: 1.6rem;
+    }
+
+    .skill {
+        padding: 6px 12px;
+        font-size: 0.6rem;
+    }
+
+    #projects h2 {
+        font-size: 1.6rem;
+    }
+
+    .project h3 {
+        font-size: 1rem;
+    }
+
+    .project p {
+        font-size: 0.6rem;
+    }
+
+    .more-projects {
+        font-size: 0.8rem;
+    }
+
+    .more-projects p {
+        font-size: 0.7rem;
+    }
+
+    .more-projects a {
+        font-size: 0.8rem;
+    }
+
+    #contact h2 {
+        font-size: 1.4rem;
+    }
+
+    #contact input,
+    #contact textarea {
+        font-size: 10px;
+    }
+
+    #contact button {
+        font-size: 10px;
+    }
+
+    footer {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.7rem;
+        padding-bottom: 20px;
+    }
+
+    nav ul li a {
+        font-size: 0.6rem;
+    }
+
+    #about h2 {
+        font-size: 1.4rem;
+    }
+
+    #about p {
+        font-size: 0.7rem;
+    }
+
+    #skills h2 {
+        font-size: 1.4rem;
+    }
+
+    .skill {
+        padding: 5px 10px;
+        font-size: 0.5rem;
+    }
+
+    #projects h2 {
+        font-size: 1.4rem;
+    }
+
+    .project h3 {
+        font-size: 0.9rem;
+    }
+
+    .project p {
+        font-size: 0.5rem;
+    }
+
+    .more-projects {
+        font-size: 0.7rem;
+    }
+
+    .more-projects p {
+        font-size: 0.6rem;
+    }
+
+    .more-projects a {
+        font-size: 0.7rem;
+    }
+
+    #contact h2 {
+        font-size: 1.2rem;
+    }
+
+    #contact input,
+    #contact textarea {
+        font-size: 8px;
+    }
+
+    #contact button {
+        font-size: 8px;
+    }
+
+    footer {
+        font-size: 0.5rem;
+    }
+}

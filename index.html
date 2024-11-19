@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <title>Rudra Pratap Singh: Web & App Developer</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="profile-pic"></div>
+        <h1 class="fade-in">RUDRA PRATAP SINGH</h1>
+        <p class="fade-in" style="animation-delay: 0.5s;">Web & App Developer | Crafting Modern Digital Solutions</p>
+        <!-- <p>Contact:
+        </p> -->
+        <p> <strong>Phone: (+91) 073929 24934</strong> |
+        </p>
+        <p>Email: <strong> Email: rudrapratapsingh2026@cs.ajce.in</strong>
+        </p>
+    </header>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact" id="contactToggle">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate web and app developer currently studying Computer Science at Amal Jyothi College of
+            Engineering. My goal is to create user-centered solutions that are both functional and visually appealing. I
+            hold a B.Sc. in Mathematics and Physics from Awadh University, Ayodhya.With a strong foundation in
+            programming, problem-solving, mathematics, and Physics, I am always eager to learn new technologies to
+            enhance my
+            skills.</p>
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill">Python</div>
+            <div class="skill">Java</div>
+            <div class="skill">C</div>
+            <div class="skill">C#</div>
+            <div class="skill">HTML & CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">Express</div>
+            <div class="skill">MongoDB</div>
+            <div class="skill">Flask</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">Dart & Flutter </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+
+
+            <div class="project">
+                <h3>SDG Educational Tool</h3>
+                <p>A web-based tool for high school students to learn about the UN Sustainable Development Goals (SDGs)
+                    through science.</p>
+                <a href="https://github.com/lord-rudra0/SDG-EXPOLRER">View Project</a>
+            </div>
+            <div class="project">
+                <h3>To-Do List Web App</h3>
+                <p>A simple yet effective Web app for managing daily tasks with add, edit, and delete functionality.</p>
+                <a href="https://to-do-list-yehm.onrender.com">View Project</a>
+            </div>
+
+            <div class="project">
+                <h3>CircularHub</h3>
+                <p>An online platform connecting people to recycle, repurpose, or donate waste materials.</p>
+                <a href="#">View Project</a>
+            </div>
+
+            <div class="project">
+                <h3>Two-Pass Assembler</h3>
+                <p>A full implementation of the two-pass assembler process with an intuitive interface.</p>
+                <a href="https://sictwopass.vercel.app/">View Project</a>
+            </div>
+
+            <div class="more-projects project">
+                <p>Want to see more of my work? Check out my GitHub and LinkedIn for more projects:</p>
+                <a href="https://github.com/lord-rudra0" target="_blank">GitHub</a> |
+                <a href="https://www.linkedin.com/in/rudra-pratap-singh-3b354b272/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Rudra Pratap Singh. All rights reserved.</p>
+        <p><a href="https://www.linkedin.com/in/rudra-pratap-singh-3b354b272/" target="_blank">LinkedIn</a> | <a
+                href="https://github.com/lord-rudra0" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script>
+        const contactToggle = document.getElementById('contactToggle');
+        const contactSection = document.getElementById('contact');
+        const skillsSection = document.getElementById('skills');
+        const projectsSection = document.getElementById('projects');
+        const aboutSection = document.getElementById('about');
+
+        contactToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+
+
+            if (contactSection.style.display === 'none' || contactSection.style.display === '') {
+                contactSection.style.display = 'block';
+                skillsSection.style.display = 'none';
+                projectsSection.style.display = 'none';
+                aboutSection.style.display = 'none';
+            } else {
+                contactSection.style.display = 'none';
+                skillsSection.style.display = 'block';
+                projectsSection.style.display = 'block';
+                aboutSection.style.display = 'block';
+            }
+        });
+
+
+        contactSection.style.display = 'none';
+    </script>
+</body>
+
+</html>
