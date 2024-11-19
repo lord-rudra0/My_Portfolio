@@ -128,45 +128,42 @@
         const projectsSection = document.getElementById('projects');
         const aboutSection = document.getElementById('about');
 
-        // Initially hide the contact section
-        contactSection.style.display = 'none';
+        // Function to hide all sections except contact
+        function hideOtherSections() {
+            skillsSection.style.display = 'none';
+            projectsSection.style.display = 'none';
+            aboutSection.style.display = 'none';
+        }
 
-        // Toggle contact section visibility on click
+        // Toggle contact section visibility
         contactToggle.addEventListener('click', (e) => {
             e.preventDefault();
 
-            // Toggle contact section visibility
+            // If contact section is already visible, hide it, otherwise show it and hide others
             if (contactSection.style.display === 'none' || contactSection.style.display === '') {
                 contactSection.style.display = 'block';
-                // Hide other sections when contact is shown
-                skillsSection.style.display = 'none';
-                projectsSection.style.display = 'none';
-                aboutSection.style.display = 'none';
+                hideOtherSections();
             } else {
                 contactSection.style.display = 'none';
-                // Show all other sections when contact is hidden
                 skillsSection.style.display = 'block';
                 projectsSection.style.display = 'block';
                 aboutSection.style.display = 'block';
             }
         });
 
-        // Hide the contact section when any button is clicked, except the contact button
-        document.querySelectorAll('button').forEach(button => {
+        // Hide contact section by default when the page loads
+        contactSection.style.display = 'none';
+
+        // Add event listeners to other sections to hide the contact section when clicked
+        document.querySelectorAll('.toggle-section').forEach(button => {
             button.addEventListener('click', () => {
                 if (contactSection.style.display === 'block') {
                     contactSection.style.display = 'none';
-                    skillsSection.style.display = 'block';
-                    projectsSection.style.display = 'block';
-                    aboutSection.style.display = 'block';
                 }
             });
         });
-
-
-
-
     </script>
+
 </body>
 
 </html>
