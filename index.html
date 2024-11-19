@@ -147,6 +147,20 @@
 
 
         contactSection.style.display = 'none';
+
+        //if i touch any button contact should be hide
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                contactSection.style.display = 'none';
+                skillsSection.style.display = 'block';
+                projectsSection.style.display = 'block';
+                aboutSection.style.display = 'block';
+            });
+        });
+
+
+
     </script>
 </body>
 
