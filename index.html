@@ -128,21 +128,15 @@
         const projectsSection = document.getElementById('projects');
         const aboutSection = document.getElementById('about');
 
-        // Function to hide all sections except contact
-        function hideOtherSections() {
-            skillsSection.style.display = 'none';
-            projectsSection.style.display = 'none';
-            aboutSection.style.display = 'none';
-        }
-
-        // Toggle contact section visibility
         contactToggle.addEventListener('click', (e) => {
             e.preventDefault();
 
-            // If contact section is already visible, hide it, otherwise show it and hide others
+
             if (contactSection.style.display === 'none' || contactSection.style.display === '') {
                 contactSection.style.display = 'block';
-                hideOtherSections();
+                skillsSection.style.display = 'none';
+                projectsSection.style.display = 'none';
+                aboutSection.style.display = 'none';
             } else {
                 contactSection.style.display = 'none';
                 skillsSection.style.display = 'block';
@@ -151,19 +145,13 @@
             }
         });
 
-        // Hide contact section by default when the page loads
+
         contactSection.style.display = 'none';
 
-        // Add event listeners to other sections to hide the contact section when clicked
-        document.querySelectorAll('.toggle-section').forEach(button => {
-            button.addEventListener('click', () => {
-                if (contactSection.style.display === 'block') {
-                    contactSection.style.display = 'none';
-                }
-            });
-        });
-    </script>
 
+
+
+    </script>
 </body>
 
 </html>
