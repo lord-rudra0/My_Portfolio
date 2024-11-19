@@ -148,6 +148,17 @@
 
         contactSection.style.display = 'none';
 
+        // when contact form is opne and user clicks outside the form, close the form
+
+        document.addEventListener('click', (e) => {
+            if (contactSection.style.display === 'block' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA' && e.target.tagName !== 'BUTTON') {
+                contactSection.style.display = 'none';
+                skillsSection.style.display = 'block';
+                projectsSection.style.display = 'block';
+                aboutSection.style.display = 'block';
+            }
+        });
+
 
 
 
