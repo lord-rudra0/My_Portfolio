@@ -89,7 +89,7 @@
                 </h3>
                 <p>Developed a robust CCTV monitoring and integration system to enhance
                     security and improve real-time surveillance capabilities.</p>
-                <a href="https://github.com/lord-rudra0/CCTV">View Project</a>
+                <a href="https://cctv-integration-system.onrender.com">View Project</a>
             </div>
 
             <div class="project">
@@ -122,28 +122,36 @@
                 href="https://github.com/lord-rudra0" target="_blank">GitHub</a></p>
     </footer>
     <script>
-        const contactLink = document.getElementById('contact-link');
-        const contactSection = document.getElementById('contact-section');
-        const skillsSection = document.getElementById('skills-section');
-        const projectsSection = document.getElementById('projects-section');
-        const aboutSection = document.getElementById('about-section');
+        const contactToggle = document.getElementById('contactToggle');
+        const contactSection = document.getElementById('contact');
+        const skillsSection = document.getElementById('skills');
+        const projectsSection = document.getElementById('projects');
+        const aboutSection = document.getElementById('about');
 
-        contactLink.addEventListener('click', (e) => {
+        contactToggle.addEventListener('click', (e) => {
             e.preventDefault();
-            contactSection.style.display = 'block';
-            skillsSection.style.display = 'none';
-            projectsSection.style.display = 'none';
-            aboutSection.style.display = 'none';
-        });
 
-        document.addEventListener('click', (e) => {
-            if (contactSection.style.display === 'block' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA' && e.target.tagName !== 'BUTTON' && !contactSection.contains(e.target)) {
+
+            if (contactSection.style.display === 'none' || contactSection.style.display === '') {
+                contactSection.style.display = 'block';
+                skillsSection.style.display = 'none';
+                projectsSection.style.display = 'none';
+                aboutSection.style.display = 'none';
+            } else {
                 contactSection.style.display = 'none';
                 skillsSection.style.display = 'block';
                 projectsSection.style.display = 'block';
                 aboutSection.style.display = 'block';
             }
         });
+
+
+        contactSection.style.display = 'none';
+
+
+
+
+
     </script>
 </body>
 
